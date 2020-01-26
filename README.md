@@ -46,6 +46,8 @@ A: Type this on the *kali terminal* `wget -q -O - https://archive.kali.org/archi
 
 ## Contributors
 
+* [offensive-security](https://github.com/offensive-security)
+* [Kali Linux](https://gitlab.com/kalilinux)
 * [spyrotecher](https://github.com/spyrotecher)
 * [Atarii](https://github.com/atarii)
 * [antuketot76](https://github.com/antuketot76)
