@@ -16,6 +16,8 @@ I'm not responsible if you do any damage to your device
 I'm not responsible if your device ends up in a brick state
 You take full responsibility of everything in this, so please be careful!
 
+This software is for educational purposes only and must only be used in allowed environments.
+
 ## Requirements
 
 * Rooted Android Phone;
@@ -25,7 +27,7 @@ You take full responsibility of everything in this, so please be careful!
 
 1. Download and unzip the script folder anywhere on your sdcard/internal memory;
 2. Open-up a android terminal (You can use [Terminal Emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm)) and type `su`;
-3. After logging in as root, navigate to the folder where you extracted the script folder and type `./nethunter`
+3. After logging in as root, navigate to the folder where you extracted the script folder and type `sh nethunter`
 4. The script will start running, and then just simply wait until the installation process is finished to open up the nethunter app and install Chroot;
 
 ## FAQ's

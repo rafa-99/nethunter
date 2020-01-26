@@ -23,9 +23,9 @@ CURDIR=$(pwd)
 ARCH=$(getprop ro.product.cpu.abi)
 
 # Installing Apps
-pm install "$CURDIR"/app/nethunter.apk \
-	"$CURDIR"/app/bVNC.apk \
-	"$CURDIR"/app/term-nh.apk
+pm install "$CURDIR"/app/term-nh.apk
+pm install "$CURDIR"/app/nethunter.apk
+pm install "$CURDIR"/app/bVNC.apk
 
 # Mounting System and Data as Read and Write
 mount -o rw,remount /system
