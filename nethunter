@@ -1,0 +1,64 @@
+#!/system/bin/sh
+
+echo      -----------------------------------------
+echo      ----- Made By: RAFA_99, Spyrotecher -----
+echo      -----------------------------------------
+echo
+echo "##################################################"
+echo "##                                              ##"
+echo "##  88      a8P         db        88        88  ##"
+echo "##  88    .88'         d88b       88        88  ##"
+echo "##  88   88'          d8''8b      88        88  ##"
+echo "##  88 d88           d8'  '8b     88        88  ##"
+echo "##  8888'88.        d8YaaaaY8b    88        88  ##"
+echo "##  88P   Y8b      d8''''''''8b   88        88  ##"
+echo "##  88     '88.   d8'        '8b  88        88  ##"
+echo "##  88       Y8b d8'          '8b 888888888 88  ##"
+echo "##                                              ##"
+echo "################### NetHunter ####################"
+echo
+
+# Setting Variables
+CURDIR=$(pwd)
+ARCH=$(getprop ro.product.cpu.abi)
+
+# Installing Apps
+pm install "$CURDIR"/app/nethunter.apk \
+	"$CURDIR"/app/bVNC.apk \
+	"$CURDIR"/app/term-nh.apk
+
+# Mounting System and Data as Read and Write
+mount -o rw,remount /system
+mount -o rw,remount /data
+
+# Installing Busybox and Cleaning Up previous Ones
+[ -f /system/xbin/busybox_nh ] && echo "Removing Previous Nethunter Busybox..." && rm -rf /system/xbin/busybox_nh
+
+case $ARCH in
+	arm64*) cp -rf "$CURDIR"/busybox/arm64/busybox /system/xbin/busybox_nh
+		;;
+	arm*) cp -rf "$CURDIR"/busybox/arm/busybox /system/xbin/busybox_nh
+		;;
+esac
+
+# Giving permissions and installing Busybox
+chmod 0755 /system/xbin/busybox_nh
+
+/system/xbin/busybox_nh --install -s /system/xbin
+[ -e /system/xbin/busybox ] || {
+	print "/system/xbin/busybox not found! Symlinking..."
+	ln -s /system/xbin/busybox_nh /system/xbin/busybox
+}
+
+echo "Busybox Sucessfully Installed!"
+sleep 2
+
+# Clean up
+echo "Cleaning up..."
+rm -rf /data/local/nhsystem/kali*
+sleep 2
+
+# End
+echo "Done"
+echo "Now open the NetHunter App and install Chroot"
+sleep 2
