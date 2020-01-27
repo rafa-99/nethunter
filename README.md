@@ -1,6 +1,8 @@
-# Kali Linux Nethunter
+# Kali Linux Nethunter (Unofficial)
 
 Kali Linux Nethunter Install Script for Android without the requirement of a modified kernel and a TWRP recovery.
+
+This is only a install script, all I did was write the install script, either way, I don't Kali Linux so any other problems related to Kali Linux Nethunter will be **IGNORED**.
 
 ![alt-text](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/images/nethunter-git-logo.png)
 
