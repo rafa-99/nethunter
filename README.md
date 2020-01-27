@@ -46,6 +46,10 @@ Q: I can preform any apt operations, what about now?
 
 A: Type this on the *kali terminal* `wget -q -O - https://archive.kali.org/archive-key.asc  | apt-key add`.
 
+Q: ***X*** Kali Linux Nethunter feature doesn't work
+
+A: If you don't have a custom kernel some of the features may not work ie: *monitor mode*, *wireless adapter compatibility*, etc...
+
 ## Contributors
 
 * [offensive-security](https://github.com/offensive-security)
